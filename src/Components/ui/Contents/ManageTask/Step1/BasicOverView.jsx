@@ -68,7 +68,7 @@ function BasicOverView() {
             <p className='text-white text-[12px] font-[700]'>Task Description</p>
             <div className='min-w-[590px] flex px-[20px] py-[10px] gap-[10px] items-center boxshadow rounded-[7px]'>
                 <img  src={icon} className='max-w-[20px] max-h-[20px] self-start'/>
-                <p className='text-[#8B8B8B] text-[14px] font-[700] text-justify'>Create a visually appealing and responsive user interface for a weather application using HTML, CSS, and JavaScript. The UI should display real-time weather information for a user's specified location, including current conditions, hourly and daily forecasts. Implement a location search feature to allow users to easily find weather data for any desired location. Ensure the UI is user-friendly and functions seamlessly across various devices.</p>
+                <p className='text-[#8B8B8B] text-[14px] font-[600] text-justify'>Create a visually appealing and responsive user interface for a weather application using HTML, CSS, and JavaScript. The UI should display real-time weather information for a user's specified location, including current conditions, hourly and daily forecasts. Implement a location search feature to allow users to easily find weather data for any desired location. Ensure the UI is user-friendly and functions seamlessly across various devices.</p>
             </div>
      </div>
      <div className='flex items-start gap-[20px]'>
@@ -76,14 +76,14 @@ function BasicOverView() {
                 <p className='text-white text-[12px] font-[700]'>Task Objective</p>
                 <div className='min-w-[590px] flex px-[20px] py-[10px] gap-[10px] items-center boxshadow rounded-[7px]'>
                     <img  src={icon} className='max-w-[20px] max-h-[20px] self-start'/>
-                    <p className='text-[#8B8B8B] text-[14px] font-[700] text-justify'>Create a visually appealing and responsive user interface for a weather application using HTML, CSS, and JavaScript. The UI should display real-time weather information for a user's specified location, including current conditions, hourly and daily forecasts. Implement a location search feature to allow users to easily find weather data for any desired location. Ensure the UI is user-friendly and functions seamlessly across various devices.</p>
+                    <p className='text-[#8B8B8B] text-[14px] font-[600] text-justify'>Create a visually appealing and responsive user interface for a weather application using HTML, CSS, and JavaScript. The UI should display real-time weather information for a user's specified location, including current conditions, hourly and daily forecasts. Implement a location search feature to allow users to easily find weather data for any desired location. Ensure the UI is user-friendly and functions seamlessly across various devices.</p>
                 </div>
            </div>
            <div className='flex flex-col gap-[5px] items-start'>
                 <p className='text-white text-[12px] font-[700]'>Assessment Overview</p>
                 <div className='min-w-[590px] flex px-[20px] py-[10px] gap-[10px] items-center boxshadow rounded-[7px]'>
                     <img  src={icon} className='max-w-[20px] max-h-[20px] self-start'/>
-                    <p className='text-[#8B8B8B] text-[14px] font-[700] text-justify'>Create a visually appealing and responsive user interface for a weather application using HTML, CSS, and JavaScript. The UI should display real-time weather information for a user's specified location, including current conditions, hourly and daily forecasts. Implement a location search feature to allow users to easily find weather data for any desired location. Ensure the UI is user-friendly and functions seamlessly across various devices.</p>
+                    <p className='text-[#8B8B8B] text-[14px] font-[600] text-justify'>Create a visually appealing and responsive user interface for a weather application using HTML, CSS, and JavaScript. The UI should display real-time weather information for a user's specified location, including current conditions, hourly and daily forecasts. Implement a location search feature to allow users to easily find weather data for any desired location. Ensure the UI is user-friendly and functions seamlessly across various devices.</p>
                 </div>
            </div>
      </div>      

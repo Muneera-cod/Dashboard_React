@@ -9,15 +9,15 @@ function StepWiseDescription() {
             <p className='text-white text-[12px] font-[700]'>Task Description</p>
             <div className='min-w-[590px] flex px-[20px] py-[10px] gap-[10px] items-center boxshadow rounded-[7px] w-full'>
                 <img  src={icon} className='max-w-[20px] max-h-[20px] self-start'/>
-                <p className='text-[#8B8B8B] text-[14px] font-[700] text-justify line-clamp-1'>Create a visually appealing and responsive user interface for a weather application using HTML, CSS, and JavaScript..</p>
+                <p className='text-[#8B8B8B] text-[14px] font-[600] text-justify line-clamp-1'>Create a visually appealing and responsive user interface for a weather application using HTML, CSS, and JavaScript..</p>
             </div>
      </div>
      
            <div className='flex flex-col gap-[5px] items-start  w-full'>
                 <p className='text-white text-[12px] font-[700]'>Description</p>
-                <div className='min-w-[590px] flex px-[20px] py-[10px] gap-[10px] items-center boxshadow rounded-[7px]  w-full'>
+                <div className='min-w-[590px] flex px-[20px] py-[10px] gap-[25px] items-center boxshadow rounded-[7px]  w-full'>
                     <img  src={icon} className='max-w-[20px] max-h-[20px] self-start'/>
-                     <ul className='text-[#8B8B8B] text-[14px] font-[700] text-justify'>
+                     <ul className='text-[#8B8B8B] text-[14px] font-[600] text-justify list-disc'>
                        
                           <li>Create a visually appealing and responsive user interface for a weather application using HTML, CSS, and JavaScript.</li>
                           <li> The UI should display real-time weather information for a user's specified location, including current conditions, hourly and daily forecasts.</li>
@@ -25,7 +25,7 @@ function StepWiseDescription() {
                     </ul>
                 </div>
            </div>
-        
+         <button  className=' mr-auto text-[#E6C100] text-[12px] font-[700] flex items-center justify-center gap-[10px] p-[10px] rounded-[7px]  boxshadow'>Add More Steps Description</button>
      </div>      
   
   )

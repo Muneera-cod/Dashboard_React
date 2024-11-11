@@ -6,7 +6,7 @@ import { backtoPracticeHome } from '../../../Redux/Slice/ManageTaskSlice';
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 function Dates() {
-   const view=useSelector((state)=>state.managetasks)
+  
     const location=useLocation()
     const currtab=useSelector((state)=>state.tab)
     const dispatch=useDispatch()
@@ -14,7 +14,8 @@ function Dates() {
         dispatch(action)
     }
     console.log(currtab)
-
+    
+  console.log()
     const navigate=useNavigate()
   return (
     <div className='flex py-[15px] px-[20px] gap-[20px] items-center border-bottomSecond'>
