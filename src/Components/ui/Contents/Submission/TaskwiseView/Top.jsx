@@ -7,7 +7,7 @@ function Top() {
     <div className='flex items-center justify-between min-w-full'>
         <div className='flex items-center gap-[20px] sm:min-w-full md:min-w-fit'>
              <select className='flex justifiy-center items-center px-[20px] py-[10px]  gap-[10px] boxshadowYellow rounded-[10px] text-white bg-[#141518]'>
-                <img src={icon}  className='max-w-[15px] max-h-[15px] text-[#34A853]'/>
+                {/* <img src={icon}  className='max-w-[15px] max-h-[15px] text-[#34A853]'/> */}
                 <option className='text-white text-[12px] font-[700] mx-[10px]' value=''>Roadmap to UI/UX</option>
              </select> 
             <button className='flex  items-center justifiy-center px-[20px] py-[10px] gap-[10px] rounded-[10px] boxshadow'>
