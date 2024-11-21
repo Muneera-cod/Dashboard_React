@@ -1,9 +1,6 @@
 import React from 'react'
 import { IconChevronDown } from '@tabler/icons-react'
-import icon from '../../../../../assets/Images/greenShareInfoIcon.svg'
-import { useNavigate } from 'react-router-dom'
-import { makeView } from '../../../../../Redux/Slice/reducers/Managetasks/ManageTaskSlice'
-import { useDispatch } from 'react-redux'
+
 function Top() {
   return (
     <div className='flex flex-col items-start p-[20px] gap-[20px] boxshadow rounded-[15px]   min-w-full   overflow-auto'>
@@ -16,11 +13,7 @@ function Top() {
             <button className='flex  items-center justifiy-center px-[20px] py-[10px] gap-[10px] rounded-[10px] boxshadow'>
                  <p className='text-white text-[12px] font-[700]'>Top submissions</p>
                  <IconChevronDown className='w-[20px] h-[20px] text-white'/>
-            </button>
-           
-           
-       
-           
+            </button> 
             <button className='flex  items-center justifiy-center px-[20px] py-[10px] gap-[10px] rounded-[10px]'>
             <IconChevronDown className='w-[20px] h-[20px] text-[#8B8B8B]'/>
             <p className='text-[#8B8B8B] text-[12px] font-[700]'>See All</p>
