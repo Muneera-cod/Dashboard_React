@@ -1,39 +1,27 @@
-import React, { useEffect ,useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import greenShareInfoIcon from  '../../../../../assets/Images/greenshareInfoicon.svg'   
-import { MdOutlineSegment } from "react-icons/md";
 import { LuCalendarDays } from "react-icons/lu";
 import { PiCubeBold } from "react-icons/pi";
-import { Data } from './Data'
-import { IconAdjustmentsHorizontal,IconArrowsUpDown ,IconTriangleSquareCircleFilled} from '@tabler/icons-react';    
-function RecentSubmissions() {
+import { Data } from '../../ManageTask/PracticeHome/Data'
+import { IconTriangleSquareCircleFilled} from '@tabler/icons-react'; 
+import Top from './Top';  
+function TaskWiseView() {
     const[data,setData]=useState([])
     let getdata= Data?.filter((x)=>x.submissions.status==='submitted')
     useEffect(()=>{setData(getdata)},[])
     console.log(`dataaa${data}`)
-
   return (
+    <>
+    <Top/>
     <div className='flex flex-col items-start p-[20px] gap-[20px] boxshadow rounded-[15px]  min-w-full   overflow-auto'>
     <div className='flex items-start justify-between w-full'>
         <div className='flex items-center gap-[20px]'>
              <button className='flex p-[10px] gap-[10px] boxshadowYellow rounded-[10px]'>
                <IconTriangleSquareCircleFilled  className='max-w-[15px] max-h-[15px] text-[#34A853]'/>
-                <p className='text-[#34A853] text-[12px] font-[700]'>Recent Submissions</p>
-            </button>
-            <button className='flex p-[10px] gap-[10px] rounded-[10px] items-center'>
-                <MdOutlineSegment  className='w-[20px] h-[20px] text-[#8B8B8B]'/>
-                <p className='text-[#8B8B8B] text-[12px] font-[700]'>See All</p>
+                <p className='text-[#34A853] text-[12px] font-[700]'>All Submissions</p>
             </button>
         </div>
-        <div className='flex items-center gap-[20px]'>
-            <button className='flex p-[10px] gap-[10px] rounded-[10px] boxshadow'>
-                 <p className='text-[#8B8B8B] text-[12px] font-[700]'>Filter</p>
-                 <IconAdjustmentsHorizontal className='w-[20px] h-[20px] text-[#F31919]'/>
-            </button>
-            <button className='flex p-[10px] gap-[10px] rounded-[10px] boxshadow'>
-                <p className='text-[#8B8B8B] text-[12px] font-[700]'>Sort</p>
-                <IconArrowsUpDown className='w-[20px] h-[20px] text-[#F31919]'/>
-            </button>
-        </div>
+      
     </div>
     <div className='flex justify-between  w-full overflow-auto'>
      <table className='flex flex-col gap-[20px] w-full'>
@@ -84,7 +72,8 @@ function RecentSubmissions() {
     </div> 
        
 </div>
+</>
   )
 }
 
-export default RecentSubmissions
+export default TaskWiseView

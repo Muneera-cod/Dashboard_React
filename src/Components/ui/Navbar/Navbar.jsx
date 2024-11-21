@@ -1,16 +1,19 @@
 import React from 'react'
 import { navbardata } from './Data'
+import { useNavigate } from 'react-router-dom'
 function Navbar() {
+  const navigate=useNavigate()
   return (
-    <div className='flex flex-col items-center pt-[110px] pb-[406px] w-[90px] bg-[#141518] min-h-screen fixed overscroll-auto  text-white text-opacity-50 border-right'>
-       <div className='flex flex-col  items-center py-[20px] gap-[50px] '>
+    <div className='flex sm:flex-row md:flex-col items-center sm:justify-center md:justify-start sm:px-[20px] md:px-[0] md:pt-[110px]  md:pb-[406px] sm:h-[90px] md:h-screen md:w-[90px] bg-[#141518]  fixed bottom-0 left-0 right-0 overscroll-auto  text-white text-opacity-50 border-right'>
+       <div className='flex sm:flex-row md:flex-col items-center py-[20px] gap-[50px] '>
            {navbardata.map((x)=>{
             return(
-             <>
+             <div onClick={()=>navigate(x.link)} key={x.id} title={x.tile}>
                {x.icon}
-             </>
+             </div>
           )}) }      
        </div>
+      
       
     </div>
   )

@@ -1,41 +1,45 @@
-import React from 'react'
-import { MdOutlineSegment,MdUpdate } from "react-icons/md";
+import React ,{useEffect, useState} from 'react'
+import { PiCubeBold } from "react-icons/pi";
+import {Data} from "../../../Contents/ManageTask/PracticeHome/Data"
+import { IconEdit } from '@tabler/icons-react'
 import { RiVerifiedBadgeLine } from "react-icons/ri";
 import greenShareInfoIcon from  '../../../../../assets/Images/greenshareInfoicon.svg'   
-import { IconAdjustmentsHorizontal,IconArrowsUpDown,IconTriangleSquareCircleFilled } from '@tabler/icons-react';    
+// import {makeView,setCurDataforUpdate} from '../../../../../Redux/Slice/reducers/Managetasks/ManageTaskSlice'
+// import { useSelector,useDispatch } from 'react-redux';
 import { LuCalendarDays } from "react-icons/lu";
-import { PiCubeBold } from "react-icons/pi";
-import { Data } from './Data'
-function OngoingSubmission() {
-    let data=Data?.filter((x)=>x.status==='ongoing')
+function TabChangingPart({goToUpadteForm}) {
+   
+   let categories=[...new Set(Data.map((x)=>x.category))]
+   const [tab,setTab]=useState(0)
+   const [sliceData,SetSliceData]=useState([])
+   const handleTab=(index)=>{
+    setTab(index)
+   }
+   useEffect(()=>SetSliceData(Data.filter((x)=>x.category===categories[tab])),[tab])
+   console.log(tab)
+  
+   console.log(`qwert${sliceData}`)
+  
   return (
-    <div className='flex flex-col items-start p-[20px] gap-[20px] boxshadow rounded-[15px] min-h-[30vh]  min-w-full   overflow-auto'>
-    <div className='flex items-start justify-between min-w-full'>
-        <div className='flex items-center gap-[20px] sm:min-w-full md:min-w-fit'>
-             <button className='flex p-[10px] gap-[10px] boxshadowYellow rounded-[10px]'>
-               <IconTriangleSquareCircleFilled  className='max-w-[15px] max-h-[15px] text-[#E6C100]'/>
-                <p className='text-[#E6C100] text-[12px] font-[700]'>Ongoing Practice Tasks</p>
-            </button>
-            <button className='flex p-[10px] gap-[10px] rounded-[10px] items-center'>
-               <MdOutlineSegment className='w-[20px] h-[20px] text-[#8B8B8B]'/>
-                <p className='text-[#8B8B8B] text-[12px] font-[700]'>See All</p>
-            </button>
-        </div>
-        <div className='flex items-center gap-[20px]'>
-            <button className='flex p-[10px] gap-[10px] rounded-[10px] boxshadow'>
-                 <p className='text-[#8B8B8B] text-[12px] font-[700]'>Filter</p>
-                 <IconAdjustmentsHorizontal className='w-[20px] h-[20px] text-[#F31919]'/>
-            </button>
-            <button className='flex p-[10px] gap-[10px] rounded-[10px] boxshadow'>
-                <p className='text-[#8B8B8B] text-[12px] font-[700]'>Sort</p>
-                <IconArrowsUpDown className='w-[20px] h-[20px] text-[#F31919]'/>
-            </button>
-        </div>
+    <>
+    {/* Categories Tabs */}
+    <div className='flex gap-[20px]'>
+        {categories.map((x,index)=>{
+            return(
+         <div onClick={()=>handleTab(index)} 
+         className={`flex items-center px-[10px] py-[5px] gap-[5px] rounded-[7px] bg-[#23262B] opacity-100 boxshadow max-w-[140px] ${tab===index?'':'opacity-30'}`}>
+                       <PiCubeBold color='#1B94F6' className='w-[20px] h-[20px]'/>
+                       <p className='text-white text-[12px] font-[700] truncate'>{x}</p>
+        </div>)})}
     </div>
+    {/*  */}
+
+    {/* Datas */}
+    <div className='flex flex-col items-start p-[20px] gap-[20px] boxshadow rounded-[15px] min-h-[30vh]  min-w-full   overflow-auto'>
     <div className='flex justify-between  w-full'>
      <table className='flex flex-col gap-[20px] w-full'>
         <tbody className='flex flex-col gap-[20px]'>
-        {data && data.length?data.map((x,index)=>{return(      
+        {Data.length?sliceData.map((x,index)=>{return(      
             <tr className='flex items-center gap-[20px]  w-full' key={x.id}>
                 <td>
                     <p className='text-[#52514E] text-[12px] font-[700]'>{(index+1)}</p>
@@ -71,24 +75,26 @@ function OngoingSubmission() {
                    </div>
                 </td>
                 <td className='flex justify-end flex-1 min-w-fit'>
-                  <div className='flex  py-[3px] gap-[5px] rounded-[7px]  ' >
+                  <div className='flex  py-[3px] gap-[5px] rounded-[7px] ' >
                        
                        <div className='flex items-center justify-center h-[30px] gap-[10px]'>
                          <p className='text-white text-[12px] font-[700] text-[#52514E]'>Last Updated on {x.lastUpdatedDate}</p>
-                         <div className='p-[10px] w-[30px] h-[30px] flex items-center justify-center'>
-                            <MdUpdate  className='min-w-[20px] min-h-[20px] text-[#1B94F6]'/>
-                        </div>
+                         <button onClick={()=>goToUpadteForm(x.id)} className='boxshadow rounded-[5px] p-[10px] w-[30px] h-[30px] flex items-center justify-center'>
+                            <IconEdit  className='min-w-[20px] min-h-[20px] text-[#1B94F6]'/>
+                        </button>
                        </div>
                    </div>
                 </td>
             </tr>
             
-        )}):<div className='text-white text-[12px] font-[700] text-[#52514E] w-full my-[30px] flex items-center justify-center'>No data</div>} 
+        )}):<div className='text-white text-[12px] font-[700] text-[#52514E] w-full h-full flex items-center justify-center'>No data</div>} 
         </tbody>
      </table>
     </div> 
-       
 </div>
+    {/*  */}
+    </>
   )
 }
-export default OngoingSubmission
+
+export default TabChangingPart

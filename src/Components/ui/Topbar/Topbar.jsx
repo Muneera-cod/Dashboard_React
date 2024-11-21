@@ -4,7 +4,7 @@ import logo from '../../../assets/Images/icon.svg'
 function Topbar() {
   return (
    
-        <div className=' flex py-[15px] gap-[10px] items-center border-bottom'>
+        <div className=' flex py-[15px] gap-[10px] items-center border-bottom w-full'>
             <div className='flex px-[20px] gap-[5px]'>
                 <img src={logo} width={'20px'} height={'20px'}></img>
                 

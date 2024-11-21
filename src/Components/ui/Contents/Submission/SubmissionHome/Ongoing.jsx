@@ -1,34 +1,28 @@
-import React from 'react'
-import { MdOutlineSegment,MdUpdate } from "react-icons/md";
+import React,{useEffect, useState} from 'react'
+import { MdUpdate } from "react-icons/md";
 import { RiVerifiedBadgeLine } from "react-icons/ri";
 import greenShareInfoIcon from  '../../../../../assets/Images/greenshareInfoicon.svg'   
-import { IconAdjustmentsHorizontal,IconArrowsUpDown,IconTriangleSquareCircleFilled } from '@tabler/icons-react';    
+import { IconChevronDown,IconAlignBoxCenterStretch,IconCopyCheckFilled } from '@tabler/icons-react';    
 import { LuCalendarDays } from "react-icons/lu";
 import { PiCubeBold } from "react-icons/pi";
-import { Data } from './Data'
-function OngoingSubmission() {
-    let data=Data?.filter((x)=>x.status==='ongoing')
+import { Data } from '../../ManageTask/PracticeHome/Data';
+function Ongoing() {
+    const [data,setData]=useState([])
+    let getdata=Data?.filter((x)=>x.status==='ongoing')
+
+    useEffect(()=>{
+      
+        setData(getdata)},[])
+        console.log('abcd',getdata)
+        console.log(data)
+
   return (
     <div className='flex flex-col items-start p-[20px] gap-[20px] boxshadow rounded-[15px] min-h-[30vh]  min-w-full   overflow-auto'>
     <div className='flex items-start justify-between min-w-full'>
         <div className='flex items-center gap-[20px] sm:min-w-full md:min-w-fit'>
-             <button className='flex p-[10px] gap-[10px] boxshadowYellow rounded-[10px]'>
-               <IconTriangleSquareCircleFilled  className='max-w-[15px] max-h-[15px] text-[#E6C100]'/>
-                <p className='text-[#E6C100] text-[12px] font-[700]'>Ongoing Practice Tasks</p>
-            </button>
-            <button className='flex p-[10px] gap-[10px] rounded-[10px] items-center'>
-               <MdOutlineSegment className='w-[20px] h-[20px] text-[#8B8B8B]'/>
-                <p className='text-[#8B8B8B] text-[12px] font-[700]'>See All</p>
-            </button>
-        </div>
-        <div className='flex items-center gap-[20px]'>
-            <button className='flex p-[10px] gap-[10px] rounded-[10px] boxshadow'>
-                 <p className='text-[#8B8B8B] text-[12px] font-[700]'>Filter</p>
-                 <IconAdjustmentsHorizontal className='w-[20px] h-[20px] text-[#F31919]'/>
-            </button>
-            <button className='flex p-[10px] gap-[10px] rounded-[10px] boxshadow'>
-                <p className='text-[#8B8B8B] text-[12px] font-[700]'>Sort</p>
-                <IconArrowsUpDown className='w-[20px] h-[20px] text-[#F31919]'/>
+             <button className='flex px-[20px] py-[10px] gap-[10px] boxshadowYellow rounded-[10px]'>
+               <IconChevronDown  className='max-w-[15px] max-h-[15px] text-[#34A853]'/>
+                <p className='text-[#34A853] text-[12px] font-[700]'>Ongoing</p>
             </button>
         </div>
     </div>
@@ -64,19 +58,30 @@ function OngoingSubmission() {
                        <p className='text-white text-[12px] font-[700]'>{x.perks} Perks</p>
                    </div>
                 </td>
-                <td className='flex min-w-fit'>
+                <td className='flex min-w-fit flex-1'>
                     <div className='flex justify-start items-center py-[3px] gap-[5px] rounded-[7px]  ' >
                        <img src={greenShareInfoIcon}  className='w-[20px] h-[20px]'/>
                        <p className='text-white text-[12px] font-[700]'>{x.taskname}</p>
+                   </div>
+                </td>
+                <td className='flex min-w-fit'>
+                   <div className='flex items-center px-[10px] py-[5px] gap-[5px] rounded-[7px] bg-[#23262B] opacity-100 boxshadow' >
+                       <IconAlignBoxCenterStretch   className='text-[#E6C100] w-[20px] h-[20px]'/>
+                       <p className='text-white text-[12px] font-[700]'>Enrolled</p>
+                   </div>
+                </td>
+                <td className='flex min-w-fit'>
+                   <div className='flex items-center px-[10px] py-[5px] gap-[5px] rounded-[7px] bg-[#23262B] opacity-100 boxshadow' >
+                       <IconCopyCheckFilled   className='text-[#34A853] w-[20px] h-[20px]'/>
+                       <p className='text-white text-[12px] font-[700]'>Submitted</p>
                    </div>
                 </td>
                 <td className='flex justify-end flex-1 min-w-fit'>
                   <div className='flex  py-[3px] gap-[5px] rounded-[7px]  ' >
                        
                        <div className='flex items-center justify-center h-[30px] gap-[10px]'>
-                         <p className='text-white text-[12px] font-[700] text-[#52514E]'>Last Updated on {x.lastUpdatedDate}</p>
+                         <p className='text-[12px] font-[700] text-[#52514E]'>Last Updated on {x.lastUpdatedDate}</p>
                          <div className='p-[10px] w-[30px] h-[30px] flex items-center justify-center'>
-                            <MdUpdate  className='min-w-[20px] min-h-[20px] text-[#1B94F6]'/>
                         </div>
                        </div>
                    </div>
@@ -91,4 +96,5 @@ function OngoingSubmission() {
 </div>
   )
 }
-export default OngoingSubmission
+
+export default Ongoing

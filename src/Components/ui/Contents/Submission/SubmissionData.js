@@ -10,18 +10,16 @@ export const Data=[
         status:'ongoing',
         submissions:[
             {
-                id:111,    
-                name:'John Doe',
-                date:'28 Aug 2024',
-                profession:'student',
-                status:''
+            id:111,    
+            name:'John Doe',
+            date:'28 Aug 2024',
+            profession:'student'
             },
             {
                 id:112,    
                 name:'Jane Smith',
                 date:'28 Aug 2024',
-                profession:'student',
-                status:''
+                profession:'student'
             }
         ]
     },
@@ -39,16 +37,14 @@ export const Data=[
                 id:121,    
                 name:'John Doe',
                 date:'28 Aug 2024',
-                profession:'student',
-                status:''
-            },
-            {
+                profession:'student'
+                },
+                {
                     id:122,    
                     name:'Jane Smith',
                     date:'28 Aug 2024',
-                    profession:'student',
-                    status:''
-            }
+                    profession:'student'
+                }
         ]
 
     },
@@ -66,15 +62,13 @@ export const Data=[
                 id:131,    
                 name:'Emily Brown',
                 date:'28 Aug 2024',
-                profession:'student',
-                status:''
+                profession:'student'
                 },
                 {
                     id:132,    
                     name:'Jane Smith',
                     date:'28 Aug 2024',
-                    profession:'student',
-                    status:''
+                    profession:'student'
                 }
         ]
     },
@@ -94,15 +88,13 @@ export const Data=[
             id:141,    
             name:'John Doe',
             date:'28 Aug 2024',
-            profession:'student',
-            status:''
+            profession:'student'
             },
             {
                 id:142,    
                 name:'David Johnson',
                 date:'28 Aug 2024',
-                profession:'student',
-                status:''
+                profession:'student'
             }
         ]
     },
@@ -122,7 +114,6 @@ export const Data=[
                 name:'Jane Smith',
                 date:'4 Sep 2024',
                 profession:'student',
-                status:''
             }
          ]
 
@@ -142,10 +133,16 @@ export const Data=[
                 name:'David Johnson',
                 date:'28 Aug 2024',
                 profession:'Fresher',
-                status:'submitted'
             }
          ]
 
 },
 ]
 
+
+   
+   
+   
+
+   
+ 

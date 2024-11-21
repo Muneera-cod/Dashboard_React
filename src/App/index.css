@@ -28,3 +28,43 @@ body{
 li::marker {
     color: #8B8B8B;
   }
+
+
+
+  /* The entire scrollbar */
+::-webkit-scrollbar {
+    width: 1px; /* Width of the scrollbar */
+    scrollbar-width: thin;
+}
+
+/* The scrollbar track */
+::-webkit-scrollbar-track {
+    background: #141518; /* Color of the track */
+}
+
+/* The scrollbar handle (thumb) */
+::-webkit-scrollbar-thumb {
+    background: #383733; /* Color of the thumb */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color when hovered */
+}
+select {
+    appearance: none; 
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+  }
+  
+  /* Adds a custom arrow (you can adjust as needed) */
+  select::after {
+    content: '▼'; /* or use an SVG icon */
+    font-size: 12px;
+    color: #34A853;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
