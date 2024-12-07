@@ -8,6 +8,8 @@ import DropDown from './DropDown';
 function LeaderBoard1() {
     const view=useSelector((state)=>state.managetasks.setView)
     const [open,setOpen]=useState(0)
+    const [pratice,setPractice]=useState('Practice')
+
   return (
     <>
    
@@ -15,16 +17,16 @@ function LeaderBoard1() {
     <div className='flex flex-col items-start p-[20px] gap-[20px] boxshadow rounded-[15px]  min-w-full min-h-screen  overflow-auto relative'>
     <div className='flex items-start justify-between w-full'>
         <div className='flex items-center gap-[20px] relative'>
-             <div className='flex flex-col p-[10px] gap-[10px] boxshadow rounded-[10px] min-w-[250px] absolute top-0 z-10' onClick={()=>{open===0?setOpen(1):setOpen(0)}}>
-               <div className='flex items-center gap-2'>
+             <div className='flex flex-col p-[10px] gap-[10px]  text-[12px] font-[700]  bg-[#141518] boxshadow rounded-[10px] min-w-[300px] absolute top-0 z-10' onClick={()=>{open===0?setOpen(1):setOpen(0)}}>
+               <div className='flex items-center justify-between gap-2 '>
                  <IconTriangleSquareCircleFilled  className='max-w-[15px] max-h-[15px] text-[#34A853]'/>
-                 <p className='text-white text-[12px] font-[700]'>Roadmap to be a UIUX Designer</p>
+                 <p className='text-white'>{pratice}</p>
                  {open===1 ? <IconChevronUp stroke={2} className='text-[#34A853] max-w-[15px] max-h-[15px] '/>:<IconChevronDown stroke={2} className='text-[#34A853] max-w-[15px] max-h-[15px] '/>}
                 </div>
-                {open===1 && <DropDown/>}
+                {open===1 && <DropDown setOpen={setOpen} setPractice={setPractice}/>}
             </div>
 
-            <button className='flex p-[10px] gap-[10px] boxshadow rounded-[10px] absolute left-[300px] top-0 '>
+            <button className='flex p-[10px] gap-[10px] boxshadow rounded-[10px] absolute left-[350px] top-0 '>
                <IconTriangleSquareCircleFilled  className='max-w-[15px] max-h-[15px] text-[#34A853]'/>
                 <p className='text-white text-[12px] font-[700]'>Weekly</p>
             </button>

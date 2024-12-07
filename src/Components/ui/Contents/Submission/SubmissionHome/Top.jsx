@@ -41,16 +41,16 @@ function Top({practice,setPractice,category,setCategory}) {
             <p className='text-white text-[12px] font-[700]'>Update</p>
             </button> */}
             <div className='flex flex-wrap absolute top-[200px]  w-full'>
-             <div className='flex flex-col z-10 text-white text-[12px] font-[700] items-center justifiy-center px-[20px] py-[10px] gap-[15px] boxshadowYellow rounded-[10px] absolute bg-[#141518]'>
-               <div className='flex  items-center gap-[10px]    w-full ' onClick={()=>{open===0?setOpen(1):setOpen(0)}}>
+             <div className='flex flex-col z-10 text-white text-[12px] font-[700] items-center justifiy-center px-[15px] py-[10px] gap-[15px] boxshadowYellow rounded-[10px] absolute bg-[#141518] w-[240px] '>
+               <div className='flex  items-start gap-[10px]    w-full max-h-[20px]  overflow-hidden' onClick={()=>{open===0?setOpen(1):setOpen(0)}}>
                   {open===1 ? <IconChevronUp className='max-w-[15px] max-h-[15px] text-white'/>:<IconChevronDown  className='max-w-[15px] max-h-[15px] text-white'/>}
-                   {practice.length!==0?<p className=''>{practice?.map((x)=>x.practice_task)}</p>:<p className='text-white text-[14px] font-[700]'>Pratice</p>}
+                   {practice.length!==0?<p >{practice?.map((x)=>x.practice_task)}</p>:<p className='text-white text-[14px] font-[700]'>Pratice</p>}
                </div>
-                {open===1 && <div className='flex flex-col  w-full' onClick={()=>{setOpen(0)}}> 
-                   {Data.map((x)=><p key={x.id} className='px-[20px] py-[10px]' onClick={()=>{handlePractice(x.practice_task)}}>{x.practice_task}</p>)}
+                {open===1 && <div className='flex flex-col  ' onClick={()=>{setOpen(0)}}> 
+                   {Data.map((x)=><p key={x.id} className=' py-[10px]' onClick={()=>{handlePractice(x.practice_task)}}>{x.practice_task}</p>)}
                 </div>}
              </div>
-              <div className={`flex flex-col text-white text-[12px] font-[700] items-center justifiy-center px-[20px] py-[10px] gap-[10px] boxshadowYellow rounded-[10px] absolute bg-[#141518]  ${ practice.length!==0?'sm:left-[280px] md:left-[300px]':'left-[200px]'}`}>
+              <div className='flex flex-col text-white text-[12px] font-[700] items-center justifiy-center px-[20px] py-[10px] gap-[10px] boxshadowYellow rounded-[10px] absolute bg-[#141518] left-[250px]'>
                <div className='flex  items-center justifiy-center  gap-[10px]' onClick={()=>{open===0?setOpen(2):setOpen(0)}}>
                    {open===2 ? <IconChevronUp className='max-w-[15px] max-h-[15px] text-white'/>:<IconChevronDown  className='max-w-[15px] max-h-[15px] text-white'/>}
                    {category.length!==0?<p className=''>{category?.find((x)=>x.category).category}</p>:<p className='text-white text-[14px] font-[700]'>Category</p>}

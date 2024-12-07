@@ -1,15 +1,13 @@
 import React from 'react'
-
-function DropDown({open,setOpen}) {
+import { leaderDropdownData } from './LeaderBoardData'
+function DropDown({setOpen,setPractice}) {
     
   return (
    
             
               <div className='flex flex-col    bg-[#141518] ' onClick={()=>{setOpen(0)}}> 
-                    <p  className='px-[20px] py-[10px]' onClick={()=>{}}>jnfdnflkmadf</p>
-                   <p  className='px-[20px] py-[10px]' onClick={()=>{}}>jnfdnflkmadf</p>
-                   <p  className='px-[20px] py-[10px]' onClick={()=>{}}>jnfdnflkmadf</p>
-                   <p  className='px-[20px] py-[10px]' onClick={()=>{}}>jnfdnflkmadf</p>
+                    {leaderDropdownData.map((x)=><p key={x.id}  className='px-[20px] py-[10px]' onClick={()=>{setPractice(x.title)}}>{x.title}</p>)}
+                 
 
 
                 </div> 
