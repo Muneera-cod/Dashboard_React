@@ -10,7 +10,7 @@ function Process({proccessCount}) {
     
      <div className='flex flex-col gap-[5px] items-start w-full'>
         <p className='text-white text-[12px] font-[700]'>Process Name</p>
-            <div className='min-w-[590px] flex px-[20px] py-[10px] gap-[10px] items-center boxshadow rounded-[7px] w-full'>
+            <div className='md:min-w-[590px] flex px-[20px] py-[10px] gap-[10px] items-center boxshadow rounded-[7px] w-full'>
                 <img  src={icon1} className='max-w-[20px] max-h-[20px] self-start'/>
                 <input className='text-[#8B8B8B] text-[14px] font-[600] text-justify line-clamp-1 bg-[#141518] w-full'></input>
             </div>
@@ -18,13 +18,13 @@ function Process({proccessCount}) {
      
            <div className='flex flex-col gap-[5px] items-start  w-full'>
                 <p className='text-white text-[12px] font-[700]'>Task Description</p>
-                <div className='min-w-[590px] flex px-[20px] py-[10px] gap-[25px] items-center boxshadow rounded-[7px]  w-full'>
+                <div className='md:min-w-[590px] flex px-[20px] py-[10px] gap-[25px] items-center boxshadow rounded-[7px]  w-full'>
                     <img  src={icon} className='max-w-[20px] max-h-[20px] self-start'/>
                     <textarea className='text-[#8B8B8B] text-[14px] font-[600] text-justify line-clamp-1 bg-[#141518] w-full'></textarea>
 
                 </div>
            </div>
-           <div className='flex items-end gap-[10px]'>
+           <div className='flex sm:flex-col md:flex-row items-end gap-[10px]'>
                 <div className='flex flex-col gap-[5px] items-start'>
                     <p className='text-white text-[12px] font-[700]'>URL Field Required</p>
                     <div className='flex gap-[5px] items-start'>

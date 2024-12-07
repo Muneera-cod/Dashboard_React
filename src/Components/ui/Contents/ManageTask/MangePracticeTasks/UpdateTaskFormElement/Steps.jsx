@@ -1,13 +1,11 @@
-import React from 'react'
-import icon from '../../../../../assets/Images/yellowshareInfoicon.svg'
-import { useState } from 'react'
-function StepWiseDescription() {
+import React,{useState} from 'react'
+import icon from '../../../../../../assets/Images/yellowshareInfoicon.svg'
+function Steps() {
   const [addStep,setAddStep]=useState([1]);
   const handleStep=(a)=>{
         setAddStep([...addStep,a])
   }
   console.log(addStep)
-
   return (
     <div className='flex flex-col items-start p-[20px] gap-[20px] boxshadow rounded-[15px] min-h-[30vh]  w-full '>
     <p className='text-[#E6C100] text-[12px] font-[700]'>Stepwise Description</p>
@@ -38,8 +36,7 @@ function StepWiseDescription() {
 
          <button onClick={()=>handleStep(addStep.length+1)} className=' mr-auto text-[#E6C100] text-[12px] font-[700] flex items-center justify-center gap-[10px] p-[10px] rounded-[7px]  boxshadow'>Add More Steps Description</button>
      </div>      
-  
   )
 }
 
-export default StepWiseDescription
+export default Steps

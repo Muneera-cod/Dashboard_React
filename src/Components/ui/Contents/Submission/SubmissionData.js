@@ -1,142 +1,101 @@
-export const Data=[
-    {
-        id:11,
-         date:'28 Aug 2024',
-        category:'coding',
-        processes:'05',
-        perks:35,
-        taskname:'Roadmap to be a UIUX Designer',
-        lastUpdatedDate:'17-07-2024',
-        status:'ongoing',
-        submissions:[
-            {
+export const SubData=[
+    
+     {
             id:111,    
             name:'John Doe',
             date:'28 Aug 2024',
-            profession:'student'
-            },
-            {
-                id:112,    
-                name:'Jane Smith',
-                date:'28 Aug 2024',
-                profession:'student'
-            }
-        ]
+            profession:'Student',
+            completed:11
     },
     {
-        id:12,
-         date:'28 Aug 2024',
-        category:'Management',
-        processes:'05',
-        perks:35,
-        taskname:'Learning essential design principles',
-        lastUpdatedDate:'17-07-2024',
-        status:'ongoing',
-        submissions:[
-            {
-                id:121,    
-                name:'John Doe',
-                date:'28 Aug 2024',
-                profession:'student'
-                },
-                {
-                    id:122,    
-                    name:'Jane Smith',
-                    date:'28 Aug 2024',
-                    profession:'student'
-                }
-        ]
+            id:112,    
+            name:'Jane Smith',
+            date:'28 Aug 2024',
+            profession:'Fresher',
+            completed:14
 
+    }
+     ,
+   
+    {
+            id:113,    
+            name:'John Doe',
+            date:'28 Aug 2024',
+            profession:'student',
+            completed:3
+
+
+     },
+    {
+            id:114,    
+            name:'Jane Smith',
+            date:'28 Aug 2024',
+            profession:'Student',
+            completed:8
+
+    }
+    ,
+     
+    {
+           id:115,    
+           name:'Emily Brown',
+           date:'28 Aug 2024',
+           profession:'Fresher'
+           ,
+            completed:10
     },
     {
-        id:13,
-        date:'28 Aug 2024',
-        category:' Design',
-        processes:'05',
-        perks:35,
-        taskname:'Roadmap to be a UIUX Designer',
-        lastUpdatedDate:'17-07-2024',
-        status:'ongoing',
-        submissions:[
-              {
-                id:131,    
-                name:'Emily Brown',
-                date:'28 Aug 2024',
-                profession:'student'
-                },
-                {
-                    id:132,    
-                    name:'Jane Smith',
-                    date:'28 Aug 2024',
-                    profession:'student'
-                }
-        ]
-    },
+            id:116,    
+            name:'Jane Smith',
+            date:'28 Aug 2024',
+            profession:'Student'
+            ,
+            completed:7
+    }
+        
+    ,
 
    
     {
-        id:14,
-        date:'28 Aug 2024',
-        category:'Problem-solving',
-        processes:'05',
-        perks:35,
-        taskname:'Gaining experience through internships',
-        lastUpdatedDate:'17-07-2024',
-         status:'completed',
-         submissions:[
-         {
-            id:141,    
+       
+            id:117,    
             name:'John Doe',
             date:'28 Aug 2024',
-            profession:'student'
-            },
-            {
-                id:142,    
-                name:'David Johnson',
-                date:'28 Aug 2024',
-                profession:'student'
-            }
-        ]
+            profession:'Fresher'
+            ,
+            completed:12
     },
+    {
+            id:118,    
+            name:'David Johnson',
+            date:'28 Aug 2024',
+            profession:'Student',
+            completed:5
+    }
+    
    ,
+  
    {
-    id:15,
-    date:'4 Sep 2024',
-     category:'Problem-solving',
-        processes:'05',
-        perks:35,
-        taskname:'Learning essential design principles',
-         lastUpdatedDate:'17-07-2024',
-         status:'completed',
-         submissions:[
-            {
-                id:152,  
-                name:'Jane Smith',
-                date:'4 Sep 2024',
-                profession:'student',
-            }
-         ]
+            id:119,  
+            name:'Jane Smith',
+            date:'4 Sep 2024',
+            profession:'Student',
+            
+            completed:13
+    }
+ ,        
 
-
- }, {
-    id:16,
-    date:'28 Aug 2024',
-    category:'Problem-solving',
-        processes:'05',
-        perks:35,
-        taskname:'Roadmap to be a UIUX Designer',
-    lastUpdatedDate:'17-07-2024',
-         status:'completed',
-         submissions:[
             {
-                id:161,
+                id:120,
                 name:'David Johnson',
                 date:'28 Aug 2024',
                 profession:'Fresher',
+                
+            completed:9
             }
-         ]
+   
 
-},
+
 ]
 
 

@@ -1,16 +1,16 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
+import React ,{useState} from 'react'
 import Top from './Top'
 import Ongoing from './Ongoing'
 import Completed from './Completed'
 function SubmissionHome() {
-    const view=useSelector((state)=>state.managetasks.setView)
-    console.log(`view${view}`)
+ const [practice,setPractice]=useState([])
+ const [category,setCategory]=useState([])
+
   return (
     <>
-    <Top/>
-    <Completed/>
-    <Ongoing/>
+    <Top practice={practice} setPractice={setPractice} category={category} setCategory={setCategory}/>
+    <Completed practice={practice}  category={category} />
+    <Ongoing practice={practice}   category={category}/>
    
     </>
   )

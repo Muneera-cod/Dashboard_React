@@ -4,10 +4,13 @@
 
 *{
     box-sizing: border-box;
+    font-family: Nunito;
 }
 
 body{
    margin: 0;
+   background:#141518;
+   color: white;
 }
 
 .border-right{
@@ -30,10 +33,20 @@ li::marker {
   }
 
 
-
+table tbody tr {
+    scrollbar-base-color: #141518;
+    &::-webkit-scrollbar-thumb {
+        /* Color of the thumb */
+        background: #383733; 
+         border-radius: 10px; /* Rounded corners */
+         
+     }
+    
+}
   /* The entire scrollbar */
 ::-webkit-scrollbar {
-    width: 1px; /* Width of the scrollbar */
+    width: 4px; /* Vertical scrollbar thickness */
+    height: 4px; /* Horizontal scrollbar thickness */
     scrollbar-width: thin;
 }
 
@@ -44,7 +57,8 @@ li::marker {
 
 /* The scrollbar handle (thumb) */
 ::-webkit-scrollbar-thumb {
-    background: #383733; /* Color of the thumb */
+   /* Color of the thumb */
+   background: #383733; 
     border-radius: 10px; /* Rounded corners */
 }
 

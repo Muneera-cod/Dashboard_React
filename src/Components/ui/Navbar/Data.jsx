@@ -6,13 +6,13 @@ export const navbardata=[
     {
         id:1,
         icon: <IconSmartHome className='hover:text-[#1B94F6] w-[24px] h-[24px]'/>,
-        link:'/',
+        link:'/home',
         tile:'home'
     },
     {
         id:2,
         icon: <BsPersonCircle className='hover:text-[#1B94F6] w-[24px] h-[24px]'/>,
-        link:'',
+        link:'/user',
         tile:'user'
     }, 
     {
@@ -24,27 +24,27 @@ export const navbardata=[
     {
         id:4,
         icon: <img src={meeting} className='hover:text-[#1B94F6] w-[24px] h-[24px]'></img>,
-        link:'manageTasks',
+        link:'/manageTasks',
         tile:'Manage Tasks'
     }
     ,
     {
         id:5,
         icon: <IconSettings className='hover:text-[#1B94F6] w-[24px] h-[24px]'/>,
-        link:'',
+        link:'/setting',
         tile:'setting'
     }
     ,
     {
         id:6,
         icon: <IconLogout className='hover:text-[#1B94F6] w-[24px] h-[24px]'/>,
-        link:'',
+        link:'/logout',
         tile:'LogOut'
     } ,
     {
         id:7,
         icon: <IconUsers className='hover:text-[#1B94F6] w-[24px] h-[24px]'/>,
-        link:'',
+        link:'/employee',
         tile:'Employee'
     }
 ]
